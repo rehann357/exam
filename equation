@@ -1,0 +1,44 @@
+quadractic equation
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float a, b, c, d, r1, r2, rpart, ipart;
+
+    printf("enter the value fro a b c");
+    scanf("%f%f%f", &a, &b, &c);
+
+    if (a == 0)
+    {
+        printf("a cannot be zero");
+        return 0;
+    }
+
+    d = (b * b) - (4 * a * c);
+
+    if (d > 0)
+    {
+        printf("root are real and distinct ");
+        r1 = (-b + sqrt(d)) / (2 * a);
+        r2 = (-b - sqrt(d)) / (2 * a);
+        printf("r1 = %f\n r2 = %f", r1, r2);
+    }
+    else if (d == 0)
+    {
+        printf("roots are equal and real");
+        r1 = (-b) / (2 * a);
+        r2 = r1;
+        printf("r1=%f \n r2 =%f", r1, r2);
+    }
+    else
+    {
+        printf("roots are imaginary");
+        rpart = (-b) / (2.0 * a);
+        ipart = sqrt(-d) / (2.0 * a);
+        printf("The roots are r1=%f + i %f\n", rpart, ipart);
+        printf("r2=%f - i %f\n", rpart, ipart);
+    }
+
+    return 0;
+}
