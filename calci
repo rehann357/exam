@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main()
+{
+    int num1, num2, result;
+    char op;
+
+    printf("enter the operator(+,-,*,/,%):");
+    scanf("%c", &op);
+
+    printf("enter the value for num1 and num2:");
+    scanf("%d%d", &num1, &num2);
+
+    if (op == '+')
+    {
+        result = num1 + num2;
+    }
+    else if (op == '-')
+    {
+        result = num1 - num2;
+    }
+    else if (op == '*')
+    {
+        result = num1 * num2;
+    }
+    else if (op == '/')
+    {
+        if (num2 == 0)
+        {
+            printf("num2 cannot be zero");
+        }
+        else
+        {
+            result = num1 / num2;
+        }
+    }
+    else if (op == '%')
+    {
+        result = num1 % num2;
+    }
+    else
+    {
+        printf("invalid operator");
+    }
+    printf("the value is %d", result);
+
+    return 0;
+}
